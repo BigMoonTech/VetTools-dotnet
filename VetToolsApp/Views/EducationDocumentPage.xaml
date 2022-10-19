@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:VetToolsApp.Controls"
+             x:Class="VetToolsApp.Views.EducationDocumentPage"
+             
+             Title="Disease Details">
+    
+    <Grid RowDefinitions="*,40" ColumnDefinitions="*,*,*" Padding="10" RowSpacing="5">
+        
+        <controls:EducationDocContent x:Name="diseaseDocumentText"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
+        
+        <Button x:Name="EndButton1"
+                Grid.Column="0"
+                Grid.Row="1"
+                Text="End"
+                HorizontalOptions="Start"
+                SemanticProperties.Hint="Press to end the questionnaire"
+                Clicked="EndButton1_Clicked" />
+
+        <Button x:Name="NextButton1"
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="Next"
+                HorizontalOptions="End"
+                SemanticProperties.Hint="Press to advance the questionnaire"
+                Clicked="NextButton1_Clicked"/>
+    </Grid>
+</ContentPage>
