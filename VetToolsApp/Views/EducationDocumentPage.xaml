@@ -1,17 +1,84 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:VetToolsApp.Controls"
              x:Class="VetToolsApp.Views.EducationDocumentPage"
-             
              Title="Disease Details">
     
     <Grid RowDefinitions="*,40" ColumnDefinitions="*,*,*" Padding="10" RowSpacing="5">
-        
-        <controls:EducationDocContent x:Name="diseaseDocumentText"
-                Grid.ColumnSpan="3"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand" />
+        <VerticalStackLayout Spacing="10"
+                             Padding="30"
+                             Grid.ColumnSpan="3"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand" >
+
+            <Label LineBreakMode="WordWrap"
+               VerticalOptions="Center"
+               HorizontalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Disease: " FontAttributes="Italic, Bold" />
+                        <Span Text="{x:Binding Name}" FontSize="14"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label LineBreakMode="WordWrap"
+               VerticalOptions="Center"
+               HorizontalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Description: " FontAttributes="Italic, Bold" />
+                        <Span Text="{x:Binding Description}" FontSize="14"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label LineBreakMode="WordWrap"
+               VerticalOptions="Center"
+               HorizontalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Clinical Signs: " FontAttributes="Italic, Bold" />
+                        <Span Text="{x:Binding ClinicalSigns}" FontSize="14"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label LineBreakMode="WordWrap"
+               VerticalOptions="Center"
+               HorizontalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Contracted By: " FontAttributes="Italic, Bold" />
+                        <Span Text="{x:Binding ContractedBy}" FontSize="14"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label LineBreakMode="WordWrap"
+               VerticalOptions="Center"
+               HorizontalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Prevention: " FontAttributes="Italic, Bold" />
+                        <Span Text="{x:Binding PreventionTips}" FontSize="14"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label LineBreakMode="WordWrap"
+               VerticalOptions="Center"
+               HorizontalOptions="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Additional Info: " FontAttributes="Italic" />
+                        <Span Text="{x:Binding AdditionalInfo}" FontSize="14"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </VerticalStackLayout>
+
         
         <Button x:Name="EndButton1"
                 Grid.Column="0"

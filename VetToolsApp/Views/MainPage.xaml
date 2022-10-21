@@ -9,12 +9,6 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
             <Label
                 Text="Please select a disease to start."
                 SemanticProperties.HeadingLevel="Level1"
@@ -22,22 +16,19 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Picker x:Name="diseaseSelection" Title="Please select a disease" HorizontalOptions="Center">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Lime Disease</x:String>
-                        <x:String>Roundworm</x:String>
-                        <x:String>Hookworm</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-                
+            <Picker x:Name="picker"
+                    Title="Please select a disease" 
+                    HorizontalOptions="Center"
+                    ItemsSource="{Binding Diseases}"
+                    SelectedItem="{Binding SelectedDisease}"
+                    SelectedIndexChanged="picker_SelectedIndexChanged"
+                    ItemDisplayBinding="{Binding Name}" />
 
             <Button
                 x:Name="startButton"
                 Text="Start Questionnaire"
                 SemanticProperties.Hint="Press to start questionnaire with selected disease"
-                Clicked="OnStartButtonClicked"
+                Clicked="StartButtonClicked"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

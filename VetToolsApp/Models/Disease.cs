@@ -1,12 +1,17 @@
 ﻿namespace VetToolsApp.Models;
 
-internal abstract class Disease
+public class Disease
 {
-    public abstract string Name { get; }
-    
-    public abstract string Description { get; }
+    public string Name { get; set; }
 
-    public abstract string ClinicalSigns { get; }
+    public string Description { get; set; }
 
-    public abstract string ContractedText { get; }
+    public string ClinicalSigns { get; set; }
+
+    public string ContractedBy { get; set; }
+
+    public string AdditionalInfo { get; set; }
+
+    public string PreventionTips { get; set; }
+
 }
