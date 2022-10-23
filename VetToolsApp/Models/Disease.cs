@@ -1,4 +1,6 @@
-﻿namespace VetToolsApp.Models;
+﻿using BinaryTreeStructures.Nodes;
+
+namespace VetToolsApp.Models;
 
 public class Disease
 {
@@ -13,5 +15,7 @@ public class Disease
     public string AdditionalInfo { get; set; }
 
     public string PreventionTips { get; set; }
+
+    public List<QueryNode> QueryList { get; set; }
 
 }

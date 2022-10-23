@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using VetToolsApp.Models;
+using VetToolsApp.Viewmodels.Queries;
 
 namespace VetToolsApp.ViewModels;
 
@@ -45,7 +46,8 @@ public class DiseaseViewModel : INotifyPropertyChanged
             Description = "Lorem ipsum dolor sit amet.",
             ClinicalSigns = "Lethargy. Weakness. A \"walking on eggshell\" appearance to their gait. Rotating lameness (limping on different legs at varrying times). Increased thirst. Increased urination.",
             ContractedBy = "Lyme Disease is contracted by lorem ipsum.",
-            PreventionTips = "Stay out of tall grass."
+            PreventionTips = "Stay out of tall grass.",
+            QueryList = new LymeDiseaseQueryModel().Queries
         });
 
         Diseases.Add(new Disease
@@ -55,7 +57,8 @@ public class DiseaseViewModel : INotifyPropertyChanged
             ClinicalSigns = "Pot Belly and/or belly pain. Breath smells like \"Puppy Breath\". Diarrhea. Worms in stool or vomit. Weakness. Weight loss. Dull Coat",
             ContractedBy = "Environment—Dogs and cats can contract Roundworm when they consume worm larvae or eggs from infected feces or ground-soil where infected feces previously laid. Raw or undercooked meats. Mother—Puppies and kittens can become infected during embryonic development when larvae in the mother's tissues migrate through the uterus and placenta and into the baby. Larvae can also enter the mother's mammary tissues and cause infection through nursing. And contact with infected feces during the birthing process.",
             AdditionalInfo = "WARNING: Roundworm is Zoonotic! Zoonotic parasites can be passed from animal to humans. It is Recommended that Pet-Parents thoroughly sanitize their hands after handling an infected animal, and when picking up animal feces. Note: Roundworm is the most common parasitic worm found inside dogs and cats.",
-            PreventionTips = "Continue with annual fecal testing. Many heartworm preventative medications also offer protection against Roundworm."
+            PreventionTips = "Continue with annual fecal testing. Many heartworm preventative medications also offer protection against Roundworm.",
+            QueryList = new RoundwormQueryModel().Queries
         });
 
         Diseases.Add(new Disease
@@ -65,7 +68,8 @@ public class DiseaseViewModel : INotifyPropertyChanged
             ClinicalSigns = "HW signs",
             ContractedBy = "Things make HW contractable",
             AdditionalInfo = "No additional notes",
-            PreventionTips = "HW prevention tips."
+            PreventionTips = "HW prevention tips.",
+            QueryList = new HookwormQueryModel().Queries
         });
         #endregion
     }

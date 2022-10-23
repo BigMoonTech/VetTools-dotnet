@@ -17,8 +17,8 @@
                 HorizontalOptions="Center" />
 
             <Picker x:Name="picker"
-                    Title="Please select a disease" 
                     HorizontalOptions="Center"
+                    MinimumWidthRequest="200"
                     ItemsSource="{Binding Diseases}"
                     SelectedItem="{Binding SelectedDisease}"
                     SelectedIndexChanged="picker_SelectedIndexChanged"
@@ -29,6 +29,7 @@
                 Text="Start Questionnaire"
                 SemanticProperties.Hint="Press to start questionnaire with selected disease"
                 Clicked="StartButtonClicked"
+                MaximumHeightRequest="40"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

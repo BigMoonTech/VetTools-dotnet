@@ -5,85 +5,87 @@
              Title="Disease Details">
     
     <Grid RowDefinitions="*,40" ColumnDefinitions="*,*,*" Padding="10" RowSpacing="5">
-        <VerticalStackLayout Spacing="10"
-                             Padding="30"
-                             Grid.ColumnSpan="3"
-                             HorizontalOptions="FillAndExpand"
-                             VerticalOptions="FillAndExpand" >
+        <ScrollView Grid.ColumnSpan="3" 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+            <VerticalStackLayout Spacing="10"
+                                 Padding="30"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand" >
 
-            <Label LineBreakMode="WordWrap"
-               VerticalOptions="Center"
-               HorizontalOptions="Start">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Disease: " FontAttributes="Italic, Bold" />
-                        <Span Text="{x:Binding Name}" FontSize="14"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                <Label LineBreakMode="WordWrap"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Disease: " FontAttributes="Italic, Bold" />
+                            <Span Text="{x:Binding Name}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
-            <Label LineBreakMode="WordWrap"
-               VerticalOptions="Center"
-               HorizontalOptions="Start">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Description: " FontAttributes="Italic, Bold" />
-                        <Span Text="{x:Binding Description}" FontSize="14"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                <Label LineBreakMode="WordWrap"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Description: " FontAttributes="Italic, Bold" />
+                            <Span Text="{x:Binding Description}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
-            <Label LineBreakMode="WordWrap"
-               VerticalOptions="Center"
-               HorizontalOptions="Start">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Clinical Signs: " FontAttributes="Italic, Bold" />
-                        <Span Text="{x:Binding ClinicalSigns}" FontSize="14"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                <Label LineBreakMode="WordWrap"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Clinical Signs: " FontAttributes="Italic, Bold" />
+                            <Span Text="{x:Binding ClinicalSigns}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
-            <Label LineBreakMode="WordWrap"
-               VerticalOptions="Center"
-               HorizontalOptions="Start">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Contracted By: " FontAttributes="Italic, Bold" />
-                        <Span Text="{x:Binding ContractedBy}" FontSize="14"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                <Label LineBreakMode="WordWrap"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Contracted By: " FontAttributes="Italic, Bold" />
+                            <Span Text="{x:Binding ContractedBy}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
-            <Label LineBreakMode="WordWrap"
-               VerticalOptions="Center"
-               HorizontalOptions="Start">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Prevention: " FontAttributes="Italic, Bold" />
-                        <Span Text="{x:Binding PreventionTips}" FontSize="14"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                <Label LineBreakMode="WordWrap"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Prevention: " FontAttributes="Italic, Bold" />
+                            <Span Text="{x:Binding PreventionTips}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
-            <Label LineBreakMode="WordWrap"
-               VerticalOptions="Center"
-               HorizontalOptions="Start">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Additional Info: " FontAttributes="Italic" />
-                        <Span Text="{x:Binding AdditionalInfo}" FontSize="14"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                <Label LineBreakMode="WordWrap"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Additional Info: " FontAttributes="Italic" />
+                            <Span Text="{x:Binding AdditionalInfo}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
-        </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
 
-        
         <Button x:Name="EndButton1"
                 Grid.Column="0"
                 Grid.Row="1"
-                Text="End"
+                Text="Back"
                 HorizontalOptions="Start"
                 SemanticProperties.Hint="Press to end the questionnaire"
                 Clicked="EndButton1_Clicked" />
