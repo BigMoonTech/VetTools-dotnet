@@ -76,9 +76,8 @@ public partial class QueryPage : ContentPage, IQueryAttributable
         await Shell.Current.GoToAsync("//MainPage");
     }
 
-    private void NoButton_Clicked(object sender, EventArgs e)
+    private void YesButton_Clicked(object sender, EventArgs e)
     {
-        // if there are children nodes, set the current node to the last child
         if (CurrentNode.Children.Any())
         {
             CurrentNode = CurrentNode.Children.Last();
@@ -90,8 +89,9 @@ public partial class QueryPage : ContentPage, IQueryAttributable
         }
     }
 
-    private void YesButton_Clicked(object sender, EventArgs e)
+    private void NoButton_Clicked(object sender, EventArgs e)
     {
+        // if there are children nodes, set the current node to the last child
         if (CurrentNode.Children.Any())
         {
             CurrentNode = CurrentNode.Children.First();

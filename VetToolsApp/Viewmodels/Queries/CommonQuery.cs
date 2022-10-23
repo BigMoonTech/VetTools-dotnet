@@ -15,8 +15,8 @@ namespace VetToolsApp.Viewmodels.Queries
         public string ccNearby = "Does the pet-parent have access to a community clinic nearby?";
         public string takeToCC = "Advise Pet-Parent: Take your animal to a nearby community clinic for the recommended treatment.";
         public string isUrgent = "Does the animal need treatment immediately?";
-        public string adviseER = "Advise Pet-Parent: Take the animal to an animal hospital ER for immediate treatment. Note: treatment is available through PetIQ and usually consists of Pyrantel liquid @ 1mL per every 10 pounds or another OTC de-wormer.";
-        public string onlineRx = "Advise Pet-Parent: Treatment is available through PetIQ and usually consists of Pyrantel liquid @ 1mL per every 10 pounds. Note: veterinarians recommend treating worms in a timely manner. OTC de-wormer, including Pyrantel, may be available online or through other means.";
+        public string roundwormER = "Advise Pet-Parent: Take the animal to an animal hospital ER for immediate treatment. Note: treatment is available through PetIQ and usually consists of Pyrantel liquid @ 1mL per every 10 pounds or another OTC de-wormer.";
+        public string roundwormTx = "Advise Pet-Parent: Treatment is available through PetIQ and usually consists of Pyrantel liquid @ 1mL per every 10 pounds. Note: veterinarians recommend treating worms in a timely manner. OTC de-wormer, including Pyrantel, may be available online or through other means.";
         public string reweigh = "Advise Pet-Parent: The veterinarian is required to reweigh your animal before prescribing medication due to the length of time since last visit.";
         public string seenIn3Months = "Has it been longer than 3 months since the pets last visit?";
         public string isLargeBreed = "Is the animal a large breed dog (examples: Great Dane, Bull Mastiff)?";

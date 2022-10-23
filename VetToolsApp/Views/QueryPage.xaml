@@ -29,16 +29,17 @@
                                    Grid.Row="2" 
                                    HorizontalOptions="Center"
                                    Spacing="20">
-
+                
+                <Button x:Name="YesButton"
+                        Text="Yes"
+                        SemanticProperties.Hint="Press Yes to advance to the next question."
+                        Clicked="YesButton_Clicked"/>
+                
                 <Button x:Name="NoButton"
                         Text="No"
                         SemanticProperties.Hint="Press No to advance to the next question."
                         Clicked="NoButton_Clicked"/>
 
-                <Button x:Name="YesButton"
-                        Text="Yes"
-                        SemanticProperties.Hint="Press Yes to advance to the next question."
-                        Clicked="YesButton_Clicked"/>
             </HorizontalStackLayout>
         </Grid>
 
